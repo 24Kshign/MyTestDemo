@@ -1,0 +1,33 @@
+gradle.ext.compileSdkVersion = 25
+gradle.ext.buildToolsVersion = "25.0.2"
+gradle.ext.minSdkVersion = 14
+gradle.ext.targetSdkVersion = 25
+
+String radiancezPath = rootDir.absolutePath + '/../jackcheng'
+String modulesPath = radiancezPath + '/modules'
+
+include ':CygPicture', ':appBaseUI'
+project(':CygPicture').projectDir = new File(modulesPath + '/CygPicture')
+
+include ':CygPtr'
+project(':CygPtr').projectDir = new File(modulesPath + '/CygPtr')
+
+include ':CygTools'
+project(':CygTools').projectDir = new File(modulesPath + '/CygTools')
+
+include ':CygWidget'
+project(':CygWidget').projectDir = new File(modulesPath + '/CygWidget')
+
+include ':EaseUI'
+project(':EaseUI').projectDir = new File(modulesPath + '/EaseUI')
+
+include ':JPush'
+project(':JPush').projectDir = new File(modulesPath + '/JPush')
+
+include ':GreenDao'
+project(':GreenDao').projectDir = new File(modulesPath + '/GreenDao')
+
+include ':im'
+project(':im').projectDir = new File(modulesPath + '/im')
+
+include ':app'

@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion gradle.ext.compileSdkVersion
+    buildToolsVersion gradle.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.example.candyhh.mytestdemo"
+        minSdkVersion gradle.ext.minSdkVersion
+        targetSdkVersion gradle.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true    //是否打开混淆
+            //shrinkResources true   //是否打开资源压缩
+            //zipAlignEnabled true    // Zipalign优化
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false    //是否打开混淆
+        }
+    }
+}
+
+dependencies {
+    compile project(':appBaseUI')
+    //ButterKnife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+}
