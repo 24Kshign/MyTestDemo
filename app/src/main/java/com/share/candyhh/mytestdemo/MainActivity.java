@@ -69,6 +69,6 @@ public class MainActivity extends BaseActivity {
             }
         });
         //设置自动更新
-//        ptrListViewUIComponent.delayRefresh(150);
+        ptrListViewUIComponent.delayRefresh(1000);
     }
 }
