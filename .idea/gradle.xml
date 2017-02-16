@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/../jackcheng/modules/CygWidget" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/EaseUI" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/GreenDao" />
+            <option value="$PROJECT_DIR$/../jackcheng/modules/ImageCrop" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/JPush" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/im" />
           </set>

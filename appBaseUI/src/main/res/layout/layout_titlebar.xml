@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.share.appbaseui.titlebar.TitleBarUIComponent xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lt_layout_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/lt_tv_titlebar_left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textColor="@android:color/white"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/lt_tv_titlebar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/lt_tv_titlebar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:textColor="@android:color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/lt_tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/lt_tv_titlebar_right"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp" />
+
+</com.share.appbaseui.titlebar.TitleBarUIComponent>

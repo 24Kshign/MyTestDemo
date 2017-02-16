@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/CygWidget/CygWidget.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/CygWidget/CygWidget.iml" />
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/EaseUI/EaseUI.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/EaseUI/EaseUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/GreenDao/GreenDao.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/GreenDao/GreenDao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/ImageCrop/ImageCrop.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/ImageCrop/ImageCrop.iml" />
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/JPush/JPush.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/JPush/JPush.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyTestDemo.iml" filepath="$PROJECT_DIR$/MyTestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

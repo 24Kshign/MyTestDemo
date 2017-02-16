@@ -2,19 +2,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <TextView
+    <Button
+        android:id="@+id/am_btn_listview"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="标题"
-        android:textColor="@android:color/white"
-        android:textSize="18dp" />
+        android:layout_height="wrap_content"
+        android:text="ListView" />
 
-    <include
-        android:id="@+id/am_listview_uicomponent"
-        layout="@layout/ptr_listview_uicomponent"/>
+    <Button
+        android:id="@+id/am_btn_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView" />
+
+    <Button
+        android:id="@+id/am_btn_select_pic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SelectPic" />
 
 </LinearLayout>

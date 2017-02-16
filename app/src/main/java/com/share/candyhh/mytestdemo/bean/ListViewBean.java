@@ -4,7 +4,7 @@ package com.share.candyhh.mytestdemo.bean;
  * Created by jack on 17/2/14
  */
 
-public class MainBean {
+public class ListViewBean {
 
     /**
      * id : 1

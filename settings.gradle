@@ -6,7 +6,7 @@ gradle.ext.targetSdkVersion = 25
 String radiancezPath = rootDir.absolutePath + '/../jackcheng'
 String modulesPath = radiancezPath + '/modules'
 
-include ':CygPicture', ':appBaseUI'
+include ':CygPicture'
 project(':CygPicture').projectDir = new File(modulesPath + '/CygPicture')
 
 include ':CygPtr'
@@ -27,7 +27,10 @@ project(':JPush').projectDir = new File(modulesPath + '/JPush')
 include ':GreenDao'
 project(':GreenDao').projectDir = new File(modulesPath + '/GreenDao')
 
+include ':ImageCrop'
+project(':ImageCrop').projectDir = new File(modulesPath + '/ImageCrop')
+
 include ':im'
 project(':im').projectDir = new File(modulesPath + '/im')
 
-include ':app'
+include ':app', ':appBaseUI'

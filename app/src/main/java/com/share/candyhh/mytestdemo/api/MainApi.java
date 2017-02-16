@@ -1,7 +1,7 @@
 package com.share.candyhh.mytestdemo.api;
 
 import com.jack.mc.cyg.cygtools.http.BaseResponse;
-import com.share.candyhh.mytestdemo.bean.MainBean;
+import com.share.candyhh.mytestdemo.bean.ListViewBean;
 
 import java.util.List;
 
@@ -15,5 +15,5 @@ import rx.Observable;
 public interface MainApi {
 
     @POST("/api/teacher?type=4&num=30")
-    Observable<BaseResponse<List<MainBean>>> getMainInfo();
+    Observable<BaseResponse<List<ListViewBean>>> getMainInfo();
 }

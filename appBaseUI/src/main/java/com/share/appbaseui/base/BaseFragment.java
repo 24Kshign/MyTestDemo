@@ -1,4 +1,4 @@
-package com.share.appbaseui;
+package com.share.appbaseui.base;
 
 import com.jack.mc.cyg.cygtools.fragment.CygFragment;
 

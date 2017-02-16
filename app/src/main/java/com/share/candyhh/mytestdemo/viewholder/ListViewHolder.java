@@ -7,19 +7,19 @@ import android.widget.TextView;
 import com.jack.mc.cyg.cygtools.adapter.listview.CygBaseListViewHolder;
 import com.jack.mc.cyg.cygtools.glide.GlideUtil;
 import com.share.candyhh.mytestdemo.R;
-import com.share.candyhh.mytestdemo.bean.MainBean;
+import com.share.candyhh.mytestdemo.bean.ListViewBean;
 
 /**
  * Created by jack on 17/2/14
  */
 
-public class MainViewHolder extends CygBaseListViewHolder<MainBean> {
+public class ListViewHolder extends CygBaseListViewHolder<ListViewBean> {
 
     private ImageView ivAvatar;
     private TextView tvTitle;
     private TextView tvContent;
 
-    public MainViewHolder(View itemView) {
+    public ListViewHolder(View itemView) {
         super(itemView);
         ivAvatar = getView(R.id.im_iv_avatar);
         tvTitle = getView(R.id.im_tv_title);
@@ -27,9 +27,9 @@ public class MainViewHolder extends CygBaseListViewHolder<MainBean> {
     }
 
     @Override
-    public void setData(MainBean mainBean) {
-        GlideUtil.setCircleTransforms(mainBean.getPicSmall(), ivAvatar, R.mipmap.ic_launcher);
-        tvTitle.setText(mainBean.getName());
-        tvContent.setText(mainBean.getDescription());
+    public void setData(ListViewBean listViewBean) {
+        GlideUtil.setCircleTransforms(listViewBean.getPicSmall(), ivAvatar, R.mipmap.ic_launcher);
+        tvTitle.setText(listViewBean.getName());
+        tvContent.setText(listViewBean.getDescription());
     }
 }
