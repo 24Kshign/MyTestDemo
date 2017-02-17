@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo.bean;
+package com.share.candyhh.mytestdemo.model.entity;
 
 /**
  * Created by jack on 17/2/14

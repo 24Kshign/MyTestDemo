@@ -1,7 +1,7 @@
-package com.share.candyhh.mytestdemo.api;
+package com.share.candyhh.mytestdemo.model.api;
 
 import com.jack.mc.cyg.cygtools.http.BaseResponse;
-import com.share.candyhh.mytestdemo.bean.ListViewBean;
+import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
 
 import java.util.List;
 

@@ -70,21 +70,20 @@ public class CropActivity extends BaseActivity {
      * 初始化裁剪View
      */
     private void initCropView() {
+        final Intent intent = getIntent();
         // 设置允许缩放
-        mGestureCropImageView.setScaleEnabled(true);
-        // 设置禁止旋转
-        mGestureCropImageView.setRotateEnabled(false);
-
+        mGestureCropImageView.setScaleEnabled(intent.getBooleanExtra(UCrop.IS_SCALE_ENABLE, true));
+        // 设置是否旋转
+        mGestureCropImageView.setRotateEnabled(intent.getBooleanExtra(UCrop.IS_ROTATE_ENABLED, false));
         // 设置外部阴影颜色
         mOverlayView.setDimmedColor(Color.parseColor("#AA000000"));
         // 设置周围阴影是否为椭圆(如果false则为矩形)
-        mOverlayView.setOvalDimmedLayer(false);
+        mOverlayView.setOvalDimmedLayer(intent.getBooleanExtra(UCrop.IS_OVAL_DIMMED_LAYER, false));
         // 设置显示裁剪边框
-        mOverlayView.setShowCropFrame(true);
-        // 设置不显示裁剪网格
-        mOverlayView.setShowCropGrid(false);
+        mOverlayView.setShowCropFrame(intent.getBooleanExtra(UCrop.IS_SHOW_CROP_FRAME, true));
+        // 设置显示裁剪网格
+        mOverlayView.setShowCropGrid(intent.getBooleanExtra(UCrop.IS_SHOW_CROP_GRID, true));
 
-        final Intent intent = getIntent();
         setImageData(intent);
     }
 

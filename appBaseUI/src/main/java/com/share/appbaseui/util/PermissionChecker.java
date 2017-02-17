@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo.util;
+package com.share.appbaseui.util;
 
 import android.content.Context;
 import android.content.pm.PackageManager;

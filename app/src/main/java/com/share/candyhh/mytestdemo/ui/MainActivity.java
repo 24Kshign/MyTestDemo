@@ -1,17 +1,17 @@
-package com.share.candyhh.mytestdemo;
+package com.share.candyhh.mytestdemo.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.share.appbaseui.base.BaseActivity;
+import com.share.candyhh.mytestdemo.R;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by jack on 17/2/16
+ *
  */
 
 public class MainActivity extends BaseActivity {
@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(this, ListViewActivity.class));
                 break;
             case R.id.am_btn_recyclerview:
-                startActivity(new Intent(this, RecyclerView.class));
+                startActivity(new Intent(this, RecyclerViewActivity.class));
                 break;
             case R.id.am_btn_select_pic:
                 startActivity(new Intent(this, SelectPicActivity.class));

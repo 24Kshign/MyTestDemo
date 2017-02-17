@@ -14,7 +14,7 @@
         android:textSize="18dp" />
 
     <include
-        android:id="@+id/am_listview_uicomponent"
+        android:id="@+id/ar_recyclerview_uicomponent"
         layout="@layout/ptr_recyclerview_uicomponent"/>
 
 </LinearLayout>

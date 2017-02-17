@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo.api;
+package com.share.candyhh.mytestdemo.model.api;
 
 
 import com.jack.mc.cyg.cygtools.http.NewBaseApi;

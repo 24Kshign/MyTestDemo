@@ -1,26 +1,24 @@
-package com.share.candyhh.mytestdemo.viewholder;
+package com.share.candyhh.mytestdemo.adapter.viewholder;
 
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jack.mc.cyg.cygtools.adapter.listview.CygBaseListViewHolder;
+import com.jack.mc.cyg.cygtools.adapter.recyclerview.CygBaseRecyclerViewHolder;
 import com.jack.mc.cyg.cygtools.glide.GlideUtil;
 import com.share.candyhh.mytestdemo.R;
-import com.share.candyhh.mytestdemo.bean.ListViewBean;
+import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
 
 /**
- * Created by jack on 17/2/14
+ * Created by jack on 17/2/17
  */
 
-public class ListViewHolder extends CygBaseListViewHolder<ListViewBean> {
-
+public class RecyclerViewHolder extends CygBaseRecyclerViewHolder<ListViewBean> {
     private ImageView ivAvatar;
     private TextView tvTitle;
     private TextView tvContent;
-
-    public ListViewHolder(View itemView) {
-        super(itemView);
+    public RecyclerViewHolder(View view) {
+        super(view);
         ivAvatar = getView(R.id.im_iv_avatar);
         tvTitle = getView(R.id.im_tv_title);
         tvContent = getView(R.id.im_tv_content);

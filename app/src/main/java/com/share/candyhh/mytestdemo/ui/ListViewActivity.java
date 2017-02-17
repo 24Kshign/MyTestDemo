@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo;
+package com.share.candyhh.mytestdemo.ui;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,8 +7,9 @@ import com.jack.mc.cyg.cygtools.http.callback.CygSubscriberApi;
 import com.jack.mc.cyg.cygtools.util.CygLog;
 import com.jack.mc.cyg.cygtools.util.CygToast;
 import com.share.appbaseui.base.BaseActivity;
+import com.share.candyhh.mytestdemo.R;
 import com.share.candyhh.mytestdemo.adapter.ListViewAdapter;
-import com.share.candyhh.mytestdemo.bean.ListViewBean;
+import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
 import com.share.candyhh.mytestdemo.model.ListViewModel;
 import com.share.jack.cygwidget.listview.PtrListViewUIComponent;
 import com.share.jack.cygwidget.loadmore.OnScrollToBottomLoadMoreListener;
@@ -31,7 +32,6 @@ public class ListViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview);
-        setAutoHideSoftInput(true);
         ButterKnife.bind(this);
 
         initView();
@@ -44,17 +44,22 @@ public class ListViewActivity extends BaseActivity {
         ptrListViewUIComponent.setOnPullToRefreshListener(new OnPullToRefreshListener() {
             @Override
             public void onPullToRefresh() {
-                ListViewModel.getInstance().execute(new CygSubscriberApi<List<ListViewBean>>(ListViewActivity.this) {
+                handler.postDelayed(new Runnable() {
                     @Override
-                    protected void onBaseNext(List<ListViewBean> data) {
-                        mAdapter.setDataList(data);
-                        CygLog.debug("data.size=" + data.size());
-                        ptrListViewUIComponent.refreshComplete();
-                        if (!ptrListViewUIComponent.isLoadMoreEnable()) {
-                            ptrListViewUIComponent.setLoadMoreEnable(true);
-                        }
+                    public void run() {
+                        ListViewModel.getInstance().execute(new CygSubscriberApi<List<ListViewBean>>(ListViewActivity.this) {
+                            @Override
+                            protected void onBaseNext(List<ListViewBean> data) {
+                                mAdapter.setDataList(data);
+                                CygLog.debug("data.size=" + data.size());
+                                ptrListViewUIComponent.refreshComplete();
+                                if (!ptrListViewUIComponent.isLoadMoreEnable()) {
+                                    ptrListViewUIComponent.setLoadMoreEnable(true);
+                                }
+                            }
+                        });
                     }
-                });
+                }, 1000);
             }
         });
 

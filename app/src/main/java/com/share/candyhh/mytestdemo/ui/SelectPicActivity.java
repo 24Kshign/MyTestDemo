@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo;
+package com.share.candyhh.mytestdemo.ui;
 
 import android.Manifest;
 import android.content.Intent;
@@ -7,23 +7,24 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.share.appbaseui.PermissionsActivity;
 import com.share.appbaseui.base.BaseActivity;
+import com.share.appbaseui.entity.CropImageEntity;
 import com.share.appbaseui.image.OnImageSelectListener;
 import com.share.appbaseui.image.SelectImageUtil;
+import com.share.candyhh.mytestdemo.R;
 import com.share.candyhh.mytestdemo.popmenu.SelectImagePopMenu;
-import com.share.candyhh.mytestdemo.util.PermissionChecker;
+import com.share.appbaseui.util.PermissionChecker;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by jack on 17/2/16
+ *
  */
 
 public class SelectPicActivity extends BaseActivity {
-
-    private static final String TAG = "SelectPicActivity";
 
     @BindView(R.id.asp_iv_image)
     ImageView aspIvImage;
@@ -42,6 +43,7 @@ public class SelectPicActivity extends BaseActivity {
 
         selectImagePopMenu = new SelectImagePopMenu(this);
         selectImageUtil = new SelectImageUtil(this);
+        selectImageUtil.setCropImageEntity(new CropImageEntity(500, 500, true, false, false, true, true));
         permissionChecker = new PermissionChecker(this);
 
         selectImagePopMenu.setOnPicSelectListener(new SelectImagePopMenu.OnPicSelectListener() {

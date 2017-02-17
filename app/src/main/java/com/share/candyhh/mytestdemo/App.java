@@ -4,7 +4,7 @@ import com.jack.mc.cyg.cygtools.app.CygApplication;
 import com.jack.mc.cyg.cygtools.app.HttpServletAddress;
 
 /**
- * Created by jack on 17/2/14
+ *
  */
 
 public class App extends CygApplication {

@@ -12,13 +12,14 @@ import com.jack.mc.cyg.cygtools.util.CygLog;
 import com.jack.mc.cyg.cygtools.util.CygToast;
 import com.kevin.crop.UCrop;
 import com.share.appbaseui.CropActivity;
+import com.share.appbaseui.entity.CropImageEntity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Created by jack on 17/2/16
+ *
  */
 
 public class SelectImageUtil {
@@ -29,9 +30,8 @@ public class SelectImageUtil {
     private Uri mDestinationUri;    // 剪切后图像文件
     private Activity mActivity;
     private OnImageSelectListener onImageSelectListener;
-    //默认裁剪图片的宽高
-    private int width = 500;
-    private int height = 500;
+
+    private CropImageEntity cropImageEntity;
 
     public SelectImageUtil(Activity activity) {
         mActivity = activity;
@@ -77,12 +77,8 @@ public class SelectImageUtil {
         }
     }
 
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
+    public void setCropImageEntity(CropImageEntity cropImageEntity) {
+        this.cropImageEntity = cropImageEntity;
     }
 
     public void setOnImageSelectListener(OnImageSelectListener onImageSelectListener) {
@@ -96,9 +92,15 @@ public class SelectImageUtil {
      */
     public void startCropActivity(Uri uri) {
         UCrop.of(uri, mDestinationUri)
-                .withAspectRatio(width, height)
-                .withMaxResultSize(width, height)
+                .withAspectRatio(cropImageEntity.getWidth(), cropImageEntity.getHeight())
+                .withMaxResultSize(cropImageEntity.getWidth(), cropImageEntity.getHeight())
                 .withTargetActivity(CropActivity.class)
+                /**
+                 * 1、是否允许缩放   2、是否允许旋转   3、周围阴影是否为椭圆(如果false则为矩形)
+                 * 4、是否显示裁剪边框   5、是否显示裁剪网格
+                 */
+                .setCropParameter(cropImageEntity.isScaleEnable(), cropImageEntity.isRotateEnable()
+                        , cropImageEntity.isOvalDimmedLayer(), cropImageEntity.isShowCropFrame(), cropImageEntity.isShowCropGrid())
                 .start(mActivity);
     }
 

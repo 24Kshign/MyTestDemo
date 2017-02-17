@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo;
+package com.share.appbaseui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,7 +14,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.jack.mc.cyg.cygtools.util.CygToast;
-import com.share.candyhh.mytestdemo.util.PermissionChecker;
+import com.share.appbaseui.util.PermissionChecker;
 
 
 /**
