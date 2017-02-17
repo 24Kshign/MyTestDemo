@@ -84,6 +84,6 @@ public class RecyclerViewActivity extends BaseActivity {
                 }, 1000);
             }
         });
-        ptrRecyclerViewUIComponent.delayRefresh(100);
+        ptrRecyclerViewUIComponent.delayRefresh(200);
     }
 }

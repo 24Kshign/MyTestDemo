@@ -12,9 +12,9 @@ import com.share.appbaseui.base.BaseActivity;
 import com.share.appbaseui.entity.CropImageEntity;
 import com.share.appbaseui.image.OnImageSelectListener;
 import com.share.appbaseui.image.SelectImageUtil;
+import com.share.appbaseui.util.PermissionChecker;
 import com.share.candyhh.mytestdemo.R;
 import com.share.candyhh.mytestdemo.popmenu.SelectImagePopMenu;
-import com.share.appbaseui.util.PermissionChecker;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,10 +29,13 @@ public class SelectPicActivity extends BaseActivity {
     @BindView(R.id.asp_iv_image)
     ImageView aspIvImage;
     private SelectImagePopMenu selectImagePopMenu;
+    private boolean isRequestPermission = false;
 
     private SelectImageUtil selectImageUtil;
     private PermissionChecker permissionChecker;
-    private static final String[] PERMISSIONS = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    private static final String[] PERMISSIONS = new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA};
 
 
     @Override
@@ -71,8 +74,11 @@ public class SelectPicActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if (permissionChecker.lacksPermissions(PERMISSIONS)) {
-            PermissionsActivity.startActivityForResult(this, 0, PERMISSIONS);
+        if (!isRequestPermission) {
+            if (permissionChecker.lacksPermissions(PERMISSIONS)) {
+                PermissionsActivity.startActivityForResult(this, 0, PERMISSIONS);
+                isRequestPermission = true;
+            }
         }
     }
 

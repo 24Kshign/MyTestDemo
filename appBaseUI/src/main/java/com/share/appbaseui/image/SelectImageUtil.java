@@ -73,6 +73,8 @@ public class SelectImageUtil {
                 case UCrop.RESULT_ERROR:    // 裁剪图片错误
                     handleCropError(data);
                     break;
+                default:
+                    break;
             }
         }
     }

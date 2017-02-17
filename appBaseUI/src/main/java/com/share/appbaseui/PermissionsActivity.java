@@ -27,8 +27,7 @@ public class PermissionsActivity extends AppCompatActivity {
     public static final int PERMISSIONS_DENIED = 1; // 权限拒绝
 
     private static final int PERMISSION_REQUEST_CODE = 0; // 系统权限管理页面的参数
-    private static final String EXTRA_PERMISSIONS =
-            "permission.extra_permission"; // 权限参数
+    private static final String EXTRA_PERMISSIONS = "permission.extra_permission"; // 权限参数
     private static final String PACKAGE_URL_SCHEME = "package:"; // 方案
 
     private PermissionChecker mChecker; // 权限检测器

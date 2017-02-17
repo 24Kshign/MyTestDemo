@@ -57,6 +57,12 @@ public class ListViewActivity extends BaseActivity {
                                     ptrListViewUIComponent.setLoadMoreEnable(true);
                                 }
                             }
+
+                            @Override
+                            protected void onBaseError(Throwable t) {
+                                super.onBaseError(t);
+                                ptrListViewUIComponent.refreshComplete();
+                            }
                         });
                     }
                 }, 1000);
@@ -76,6 +82,6 @@ public class ListViewActivity extends BaseActivity {
             }
         });
         //设置自动更新
-        ptrListViewUIComponent.delayRefresh(1000);
+        ptrListViewUIComponent.delayRefresh(200);
     }
 }
