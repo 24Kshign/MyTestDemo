@@ -1,17 +1,23 @@
 package com.share.candyhh.mytestdemo.model.api;
 
 
-import com.jack.mc.cyg.cygtools.http.NewBaseApi;
+import com.jack.mc.cyg.cygtools.http.BaseRetrofit;
 
 /**
- * Created by Jack on 2016/12/1.
+ *
  */
-public class BaseModel extends NewBaseApi {
+public class BaseModel extends BaseRetrofit {
 
     protected MainApi mServletApi;
 
     public BaseModel() {
         super();
         mServletApi = mRetrofit.create(MainApi.class);
+    }
+
+    public void onUnSubscribe() {
+        //取消注册，以避免内存泄露
+        if (mCompositeSubscription != null && mCompositeSubscription.hasSubscriptions())
+            mCompositeSubscription.unsubscribe();
     }
 }

@@ -6,8 +6,8 @@ gradle.ext.targetSdkVersion = 25
 String radiancezPath = rootDir.absolutePath + '/../jackcheng'
 String modulesPath = radiancezPath + '/modules'
 
-include ':CygPicture'
-project(':CygPicture').projectDir = new File(modulesPath + '/CygPicture')
+//include ':CygPicture'
+//project(':CygPicture').projectDir = new File(modulesPath + '/CygPicture')
 
 include ':CygPtr'
 project(':CygPtr').projectDir = new File(modulesPath + '/CygPtr')

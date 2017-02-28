@@ -1,5 +1,6 @@
-package com.share.candyhh.mytestdemo.adapter.viewholder;
+package com.share.candyhh.mytestdemo.ui.adapter.viewholder;
 
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ public class RecyclerViewHolder extends CygBaseRecyclerViewHolder<ListViewBean> 
     private ImageView ivAvatar;
     private TextView tvTitle;
     private TextView tvContent;
+
     public RecyclerViewHolder(View view) {
         super(view);
         ivAvatar = getView(R.id.im_iv_avatar);
@@ -25,7 +27,7 @@ public class RecyclerViewHolder extends CygBaseRecyclerViewHolder<ListViewBean> 
     }
 
     @Override
-    public void setData(ListViewBean listViewBean) {
+    protected void onItemDataUpdated(@Nullable ListViewBean listViewBean) {
         GlideUtil.setCircleTransforms(listViewBean.getPicSmall(), ivAvatar, R.mipmap.ic_launcher);
         tvTitle.setText(listViewBean.getName());
         tvContent.setText(listViewBean.getDescription());

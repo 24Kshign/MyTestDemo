@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo.adapter;
+package com.share.candyhh.mytestdemo.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import com.jack.mc.cyg.cygtools.adapter.recyclerview.CygBaseRecyclerAdapter;
 import com.share.candyhh.mytestdemo.R;
 import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
-import com.share.candyhh.mytestdemo.adapter.viewholder.RecyclerViewHolder;
+import com.share.candyhh.mytestdemo.ui.adapter.viewholder.RecyclerViewHolder;
 
 /**
  * Created by jack on 17/2/17

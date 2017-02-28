@@ -15,6 +15,10 @@
 
     <include
         android:id="@+id/ar_recyclerview_uicomponent"
-        layout="@layout/ptr_recyclerview_uicomponent"/>
+        layout="@layout/ptr_recyclerview_uicomponent" />
+
+    <include
+        android:id="@+id/ar_empty_view"
+        layout="@layout/view_empty" />
 
 </LinearLayout>

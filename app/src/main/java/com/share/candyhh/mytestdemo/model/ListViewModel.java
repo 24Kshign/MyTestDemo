@@ -20,8 +20,7 @@ public class ListViewModel extends BaseModel {
     }
 
     public void execute(Subscriber<List<ListViewBean>> subscriber) {
-        Observable observable = mServletApi.getMainInfo()
-                .map(new HttpResultFunc());
+        Observable observable = mServletApi.getMainInfo().map(new HttpResultFunc());
         toSubscribe(observable, subscriber);
     }
 }

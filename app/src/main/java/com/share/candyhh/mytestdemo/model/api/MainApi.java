@@ -9,7 +9,7 @@ import retrofit2.http.POST;
 import rx.Observable;
 
 /**
- * Created by jack on 17/2/14
+ *
  */
 
 public interface MainApi {

@@ -1,12 +1,14 @@
 package com.share.candyhh.mytestdemo.ui;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.jack.mc.cyg.cygtools.activity.CygStartActivity;
 import com.share.appbaseui.PermissionsActivity;
 import com.share.appbaseui.base.BaseActivity;
 import com.share.appbaseui.entity.CropImageEntity;
@@ -14,7 +16,7 @@ import com.share.appbaseui.image.OnImageSelectListener;
 import com.share.appbaseui.image.SelectImageUtil;
 import com.share.appbaseui.util.PermissionChecker;
 import com.share.candyhh.mytestdemo.R;
-import com.share.candyhh.mytestdemo.popmenu.SelectImagePopMenu;
+import com.share.candyhh.mytestdemo.ui.popmenu.SelectImagePopMenu;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +27,10 @@ import butterknife.OnClick;
  */
 
 public class SelectPicActivity extends BaseActivity {
+
+    public static void start(Context context) {
+        CygStartActivity.start(context, SelectPicActivity.class);
+    }
 
     @BindView(R.id.asp_iv_image)
     ImageView aspIvImage;

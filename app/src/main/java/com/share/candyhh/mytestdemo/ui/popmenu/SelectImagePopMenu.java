@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo.popmenu;
+package com.share.candyhh.mytestdemo.ui.popmenu;
 
 import android.app.Activity;
 import android.view.View;

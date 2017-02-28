@@ -1,4 +1,4 @@
-package com.share.candyhh.mytestdemo.adapter.viewholder;
+package com.share.candyhh.mytestdemo.ui.adapter.viewholder;
 
 import android.view.View;
 import android.widget.ImageView;

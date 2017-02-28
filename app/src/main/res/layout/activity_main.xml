@@ -18,6 +18,12 @@
         android:text="RecyclerView" />
 
     <Button
+        android:id="@+id/am_btn_recyclerview_with_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView With Empty View" />
+
+    <Button
         android:id="@+id/am_btn_select_pic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -1,6 +1,5 @@
 package com.share.candyhh.mytestdemo.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -23,17 +22,21 @@ public class MainActivity extends BaseActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.am_btn_listview, R.id.am_btn_recyclerview, R.id.am_btn_select_pic})
+    @OnClick({R.id.am_btn_listview, R.id.am_btn_recyclerview, R.id.am_btn_select_pic
+            , R.id.am_btn_recyclerview_with_empty})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.am_btn_listview:
-                startActivity(new Intent(this, ListViewActivity.class));
+                ListViewActivity.start(this);
                 break;
             case R.id.am_btn_recyclerview:
-                startActivity(new Intent(this, RecyclerViewActivity.class));
+                RecyclerViewActivity.start(this);
+                break;
+            case R.id.am_btn_recyclerview_with_empty:
+                ListTestActivity.start(this);
                 break;
             case R.id.am_btn_select_pic:
-                startActivity(new Intent(this, SelectPicActivity.class));
+                SelectPicActivity.start(this);
                 break;
         }
     }

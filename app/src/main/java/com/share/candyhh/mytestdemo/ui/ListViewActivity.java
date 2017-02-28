@@ -1,16 +1,18 @@
 package com.share.candyhh.mytestdemo.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.jack.mc.cyg.cygtools.activity.CygStartActivity;
 import com.jack.mc.cyg.cygtools.http.callback.CygSubscriberApi;
 import com.jack.mc.cyg.cygtools.util.CygLog;
 import com.jack.mc.cyg.cygtools.util.CygToast;
 import com.share.appbaseui.base.BaseActivity;
 import com.share.candyhh.mytestdemo.R;
-import com.share.candyhh.mytestdemo.adapter.ListViewAdapter;
-import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
+import com.share.candyhh.mytestdemo.ui.adapter.ListViewAdapter;
 import com.share.candyhh.mytestdemo.model.ListViewModel;
+import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
 import com.share.jack.cygwidget.listview.PtrListViewUIComponent;
 import com.share.jack.cygwidget.loadmore.OnScrollToBottomLoadMoreListener;
 import com.share.jack.cygwidget.refersh.OnPullToRefreshListener;
@@ -21,6 +23,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ListViewActivity extends BaseActivity {
+
+    public static void start(Context context) {
+        CygStartActivity.start(context, ListViewActivity.class);
+    }
 
     @BindView(R.id.am_listview_uicomponent)
     PtrListViewUIComponent ptrListViewUIComponent;
@@ -83,5 +89,11 @@ public class ListViewActivity extends BaseActivity {
         });
         //设置自动更新
         ptrListViewUIComponent.delayRefresh(200);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ListViewModel.getInstance().onUnSubscribe();
     }
 }
