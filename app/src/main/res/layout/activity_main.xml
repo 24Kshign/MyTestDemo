@@ -5,28 +5,57 @@
     android:orientation="vertical"
     android:padding="10dp">
 
-    <Button
-        android:id="@+id/am_btn_listview"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="ListView" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/am_btn_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RecyclerView" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/am_btn_recyclerview_with_empty"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RecyclerView With Empty View" />
+            <Button
+                android:id="@+id/am_btn_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ListView" />
 
-    <Button
-        android:id="@+id/am_btn_select_pic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SelectPic" />
+            <Button
+                android:id="@+id/am_btn_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView" />
 
+            <Button
+                android:id="@+id/am_btn_recyclerview_with_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView With Empty View" />
+
+            <Button
+                android:id="@+id/am_btn_select_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SelectPic" />
+
+            <Button
+                android:id="@+id/am_btn_webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WebView" />
+
+            <Button
+                android:id="@+id/am_btn_dash_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DashLine" />
+
+            <Button
+                android:id="@+id/am_btn_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VerifyCode" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

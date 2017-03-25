@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appBaseUI/appBaseUI.iml" filepath="$PROJECT_DIR$/appBaseUI/appBaseUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/im/im.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/im/im.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
     </modules>
   </component>
 </project>

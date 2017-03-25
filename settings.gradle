@@ -9,7 +9,7 @@ String modulesPath = radiancezPath + '/modules'
 //include ':CygPicture'
 //project(':CygPicture').projectDir = new File(modulesPath + '/CygPicture')
 
-include ':CygPtr'
+include ':CygPtr', ':javatest'
 project(':CygPtr').projectDir = new File(modulesPath + '/CygPtr')
 
 include ':CygTools'

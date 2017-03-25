@@ -68,6 +68,10 @@ public class TitleBarUIComponent extends RelativeLayout {
         mTvTitleBarTitle.setBackgroundResource(drawableRes);
     }
 
+    public void setTitle(String text) {
+        mTvTitleBarTitle.setText(text);
+    }
+
     public void initRight(String text, OnClickListener listener) {
         mTvTitleBarRight.setText(text);
         mTvTitleBarRight.setOnClickListener(listener);
