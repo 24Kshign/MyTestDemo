@@ -46,7 +46,7 @@ public class ListTestActivity extends BaseActivity {
     }
 
     private void initView() {
-        adapter = new RecyclerViewAdapter(this);
+        adapter = new RecyclerViewAdapter(this, null);
         altRecyclerview.setLayoutManager(new LinearLayoutManager(this));
         altRecyclerview.setAdapter(adapter);
         altRecyclerview.setEmptyView(CygView.inflateLayout(this, R.layout.view_empty));
@@ -54,7 +54,7 @@ public class ListTestActivity extends BaseActivity {
     }
 
     private void getData() {
-        ListViewModel.getInstance().execute(new CygSubscriberApi<List<ListViewBean>>(ListTestActivity.this) {
+        ListViewModel.getInstance().mapExecute("4", "30", new CygSubscriberApi<List<ListViewBean>>(ListTestActivity.this) {
             @Override
             protected void onBaseNext(List<ListViewBean> data) {
                 adapter.setDataList(data);

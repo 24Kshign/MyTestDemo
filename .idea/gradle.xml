@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/appBaseUI" />
             <option value="$PROJECT_DIR$/javatest" />
+            <option value="$PROJECT_DIR$/zxingUI" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/CygPtr" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/CygTools" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/CygWidget" />
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/../jackcheng/modules/GreenDao" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/ImageCrop" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/JPush" />
+            <option value="$PROJECT_DIR$/../jackcheng/modules/Zxing" />
             <option value="$PROJECT_DIR$/../jackcheng/modules/im" />
           </set>
         </option>

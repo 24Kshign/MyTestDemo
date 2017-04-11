@@ -12,6 +12,9 @@ String modulesPath = radiancezPath + '/modules'
 include ':CygPtr', ':javatest'
 project(':CygPtr').projectDir = new File(modulesPath + '/CygPtr')
 
+include ':Zxing'
+project(':Zxing').projectDir = new File(modulesPath + '/Zxing')
+
 include ':CygTools'
 project(':CygTools').projectDir = new File(modulesPath + '/CygTools')
 
@@ -33,4 +36,4 @@ project(':ImageCrop').projectDir = new File(modulesPath + '/ImageCrop')
 include ':im'
 project(':im').projectDir = new File(modulesPath + '/im')
 
-include ':app', ':appBaseUI'
+include ':app', ':appBaseUI', ':zxingUI'

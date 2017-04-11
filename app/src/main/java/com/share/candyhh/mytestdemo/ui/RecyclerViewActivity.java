@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.jack.mc.cyg.cygptr.recyclerview.RecyclerAdapterWithHF;
 import com.jack.mc.cyg.cygtools.activity.CygStartActivity;
+import com.jack.mc.cyg.cygtools.adapter.recyclerview.CygBaseRecyclerAdapter;
 import com.jack.mc.cyg.cygtools.http.callback.CygSubscriberApi;
 import com.jack.mc.cyg.cygtools.util.CygLog;
 import com.jack.mc.cyg.cygtools.util.CygToast;
@@ -16,6 +17,7 @@ import com.share.candyhh.mytestdemo.R;
 import com.share.candyhh.mytestdemo.ui.adapter.RecyclerViewAdapter;
 import com.share.candyhh.mytestdemo.model.ListViewModel;
 import com.share.candyhh.mytestdemo.model.entity.ListViewBean;
+import com.share.candyhh.mytestdemo.ui.adapter.viewholder.RecyclerViewHolder;
 import com.share.jack.cygwidget.loadmore.OnScrollToBottomLoadMoreListener;
 import com.share.jack.cygwidget.recyclerview.PtrRecyclerViewUIComponent;
 import com.share.jack.cygwidget.refersh.OnPullToRefreshListener;
@@ -29,7 +31,7 @@ import butterknife.ButterKnife;
  *
  */
 
-public class RecyclerViewActivity extends BaseActivity {
+public class RecyclerViewActivity extends BaseActivity implements CygBaseRecyclerAdapter.OnItemClickListener {
 
     public static void start(Context context) {
         CygStartActivity.start(context, RecyclerViewActivity.class);
@@ -54,7 +56,7 @@ public class RecyclerViewActivity extends BaseActivity {
 
     private void initView() {
         handler = new Handler();
-        adapter = new RecyclerViewAdapter(this);
+        adapter = new RecyclerViewAdapter(this, this);
         mAdapter = new RecyclerAdapterWithHF(adapter);
         ptrRecyclerViewUIComponent.setLayoutManager(new LinearLayoutManager(this));
         ptrRecyclerViewUIComponent.setAdapter(mAdapter);
@@ -101,12 +103,25 @@ public class RecyclerViewActivity extends BaseActivity {
                 }, 1000);
             }
         });
+
         ptrRecyclerViewUIComponent.delayRefresh(200);
+
+        adapter.setOnDetailsClickListener(new RecyclerViewHolder.OnDetailsClickListener() {
+            @Override
+            public void onDetailsClick(View v, int position) {
+                CygToast.showToast("点击详情");
+            }
+        });
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         ListViewModel.getInstance().onUnSubscribe();
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        CygLog.debug("position---->" + position);
     }
 }

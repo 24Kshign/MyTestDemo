@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity {
                 WebViewActivity.start(this, "https://www.baidu.com/");
                 break;
             case R.id.am_btn_verify_code:
-                VerifyCodeActivity.start(this);
+                TestActivity.start(this);
                 break;
         }
     }

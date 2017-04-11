@@ -10,10 +10,13 @@
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/ImageCrop/ImageCrop.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/ImageCrop/ImageCrop.iml" />
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/JPush/JPush.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/JPush/JPush.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyTestDemo.iml" filepath="$PROJECT_DIR$/MyTestDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/Zxing/Zxing.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/Zxing/Zxing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Zxing/Zxing.iml" filepath="$PROJECT_DIR$/Zxing/Zxing.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appBaseUI/appBaseUI.iml" filepath="$PROJECT_DIR$/appBaseUI/appBaseUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/../jackcheng/modules/im/im.iml" filepath="$PROJECT_DIR$/../jackcheng/modules/im/im.iml" />
       <module fileurl="file://$PROJECT_DIR$/javatest/javatest.iml" filepath="$PROJECT_DIR$/javatest/javatest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxingUI/zxingUI.iml" filepath="$PROJECT_DIR$/zxingUI/zxingUI.iml" />
     </modules>
   </component>
 </project>

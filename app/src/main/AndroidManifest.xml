@@ -40,6 +40,9 @@
         <activity
             android:name=".ui.VerifyCodeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TestActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

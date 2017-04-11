@@ -15,12 +15,18 @@ import com.share.candyhh.mytestdemo.ui.adapter.viewholder.RecyclerViewHolder;
 
 public class RecyclerViewAdapter extends CygBaseRecyclerAdapter<ListViewBean, RecyclerViewHolder> {
 
-    public RecyclerViewAdapter(Context context) {
-        super(context);
+    private RecyclerViewHolder.OnDetailsClickListener onDetailsClickListener;
+
+    public RecyclerViewAdapter(Context context, OnItemClickListener onItemClickListener) {
+        super(context,onItemClickListener);
     }
 
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new RecyclerViewHolder(LayoutInflater.from(getContext()).inflate(R.layout.item_main, parent, false));
+        return new RecyclerViewHolder(LayoutInflater.from(getContext()).inflate(R.layout.item_main, parent, false), onDetailsClickListener);
+    }
+
+    public void setOnDetailsClickListener(RecyclerViewHolder.OnDetailsClickListener onDetailsClickListener) {
+        this.onDetailsClickListener = onDetailsClickListener;
     }
 }

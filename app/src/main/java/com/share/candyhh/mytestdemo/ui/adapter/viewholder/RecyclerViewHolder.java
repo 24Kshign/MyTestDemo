@@ -18,12 +18,28 @@ public class RecyclerViewHolder extends CygBaseRecyclerViewHolder<ListViewBean> 
     private ImageView ivAvatar;
     private TextView tvTitle;
     private TextView tvContent;
+    private TextView tvDetails;
+    private OnDetailsClickListener onDetailsClickListener;
 
-    public RecyclerViewHolder(View view) {
+    public RecyclerViewHolder(View view, OnDetailsClickListener onDetailsClickListener) {
         super(view);
-        ivAvatar = getView(R.id.im_iv_avatar);
-        tvTitle = getView(R.id.im_tv_title);
-        tvContent = getView(R.id.im_tv_content);
+        ivAvatar = findView(R.id.im_iv_avatar);
+        tvTitle = findView(R.id.im_tv_title);
+        tvContent = findView(R.id.im_tv_content);
+        tvDetails = findView(R.id.im_tv_details);
+        this.onDetailsClickListener = onDetailsClickListener;
+        initListener();
+    }
+
+    private void initListener() {
+        tvDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (null != onDetailsClickListener) {
+                    onDetailsClickListener.onDetailsClick(v, getLayoutPosition());
+                }
+            }
+        });
     }
 
     @Override
@@ -31,5 +47,9 @@ public class RecyclerViewHolder extends CygBaseRecyclerViewHolder<ListViewBean> 
         GlideUtil.setCircleTransforms(listViewBean.getPicSmall(), ivAvatar, R.mipmap.ic_launcher);
         tvTitle.setText(listViewBean.getName());
         tvContent.setText(listViewBean.getDescription());
+    }
+
+    public interface OnDetailsClickListener {
+        void onDetailsClick(View v, int position);
     }
 }
